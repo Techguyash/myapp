@@ -1,0 +1,28 @@
+.list {
+    width: 90vh;
+    height: 8vh;
+    background-color: rebeccapurple;
+    margin: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 100px;
+    align-items: center;
+    border-radius: 25px;
+  }
+  input[type="checkbox"] {
+    height: 80%;
+    width: 20px;
+  }
+  
+  .content {
+    font-size: 25px;
+  }
+  
+  .delete {
+    margin: 20px;
+  }
+  
+  .delete:hover {
+    color: white;
+  }
+  
