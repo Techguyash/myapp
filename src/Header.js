@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const [value, setValue] = useState("");
@@ -11,9 +11,11 @@ const Header = () => {
 
   const submitHandler = (e) => {
     e.preventDefault(); //
+
     if (value.length > 3) {
       console.log("Ok");
       setError(false);
+      setError("");
     } else {
       console.log("not ok");
       setError(true);
@@ -21,15 +23,15 @@ const Header = () => {
   };
 
   return (
-    <div className="container">
-      <form className="form" onSubmit={submitHandler}>
+    <div className={styles["container"]}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <input
           type="text"
-          className="todo"
+          className={styles.todo}
           value={value}
           onChange={inputHandler}
         />
-        {error && <p style={{ color: "white" }}>Invalid Text</p>}
+        {error && <p>Invalid Text</p>}
 
         <button type="submit">Create</button>
       </form>
