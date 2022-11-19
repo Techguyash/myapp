@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer />
+      <Footer todo={todo} />
     </div>
   );
 }

@@ -1,8 +1,12 @@
 .container {
-  background-color: red;
+  background-color: rgb(223, 220, 215);
   width: 100vw;
-  height: 30vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+input[type="text"] {
+  text-align: center;
 }
