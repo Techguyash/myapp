@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Footer todo={todo} />
+      <Footer todo={todo} setTodo={setTodo} />
     </div>
   );
 }
