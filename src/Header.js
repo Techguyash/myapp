@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = (props) => {
   const [value, setValue] = useState("");
   const [error, setError] = useState(false);
 
@@ -20,6 +20,13 @@ const Header = () => {
       console.log("not ok");
       setError(true);
     }
+    const enteredValue = {
+      value: value,
+      id: Math.random().toString(),
+    };
+    props.setTodo((prev) => {
+      return [...prev, enteredValue];
+    });
   };
 
   return (
